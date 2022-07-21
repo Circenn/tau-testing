@@ -1,0 +1,16 @@
+{
+  "name": "mocha-javascript",
+  "version": "1.0.0",
+  "description": "my first mocha test attempt",
+  "main": "function-calls.js",
+  "scripts": {
+    "test": "mocha .",
+    "say": "cowsay 'A quien no le va gustar un Baptisterio romano del siglo primero'"
+  },
+  "author": "Circenn <circenn.gomez93@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "cowsay": "^1.5.0",
+    "mocha": "^10.0.0"
+  }
+}

@@ -1,0 +1,76 @@
+//Select element tagged as toggle
+document.querySelectorAll('.toggle')
+
+//Toggle all
+document.querySelector(‘#toggle-all’).click()
+
+//Toggle
+document.getElementById(“toggle-all”).click()
+
+//Toggle specific element
+document.querySelector(‘ul.todo-list> li:nth-child(1) > input.toggle’)
+
+//Toggle the delete icon on one of the elements
+document.querySelector(‘ul.todo-list li:nth-child(1) button.destroy’).click() 
+
+//Toggle Clear Complete
+document.querySelector(‘button.clear-completed’).click()
+
+//Toggle the filters avariable on the app 
+document.querySelector('ul.filters > li:nth-child(1) > a').click()
+document.querySelector('ul.filters > li:nth-child(2) > a').click()
+document.querySelector('ul.filters > li:nth-child(3) > a').click()
+
+//OR
+
+location.hash = "/completed"
+location.hash = "/active"
+location.hash = "/"
+
+//Write a new value. This will only writte down a value but will not create a new one in the ToDo list.
+document.querySelector(".new-todo").value="Culo"
+
+//Add a new ToDo triggering an EVENT.
+document.querySelector(".new-todo").dispatchEvent(new Event('change', { 'bubbles': true }))
+
+//Double-Click Event for editing ToDos. The "nth-child(2)" is for selecting an specific ToDo on the list, in this case, the 2n one.
+document.querySelector('ul.todo-list > li:nth-child(2) > div > label').dispatchEvent(new Event('dblclick', { 'bubbles': true }));
+
+//In Edit mode this will change the value of the selected ToDos.
+document.querySelector('ul.todo-list > li:nth-child(2) .edit').value="changed value here"
+
+//In Edit mode this will trigger the actual change.
+document.querySelector('ul.todo-list > li:nth-child(2) .edit').dispatchEvent(new Event('blur'))
+
+//How to toggle all the ToDos items on the list:
+    //1- we need to know how many elements there are on the list. For that we use .length.
+
+    document.querySelectorAll(".toggle").length
+    
+    //2- Put the toggles found on a variable so we can stored and call it anytime we needed.
+
+    var toggles = document.querySelectorAll(".toggle")
+
+    //3- Code the loop. This will use the .lenght of the list and the variable created to checkmark any toggle until the list length ends.
+
+    for(togglepos=0; togglepos<toggles.length; togglepos++){
+    toggles[togglepos].click();
+}
+
+    //4- To uncheck just activate the last function again.
+
+// How we toggle items on the list but only the even or odd numbers (pares e inpares). Using the % symbol and IF.
+
+var toggles = document.querySelectorAll('.toggle');
+for(togglepos=0;togglepos<toggles.length;togglepos++){
+	if(togglepos%2==0){
+		toggles[togglepos].click();
+	}
+}
+
+// We can also increment the loop to do the same. Adding +=2 on the loop.
+
+var toggles = document.querySelectorAll(".toggle");
+for(togglepos=0; togglepos<toggles.length; togglepos+=2){
+    toggles[togglepos].click();
+}

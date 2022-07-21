@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const favoriteCookies = 
+        [
+                "chocolate chip", // position 0
+                "iced oatmeal", // position 1
+                "sugar cookie", // position 2
+                "butter cookies" // position 3
+        ];
+
+        // to call an array we use : favoriteCookies[2] => name of the const and the position of the value we want to see.
+
+        favoriteCookies.push("windmill cookies"); // this is for adding a new value to the array in the last place.
+        let cookie = favoriteCookies.pop(); // this is for substract the last value from the array.
+
+        console.log(favoriteCookies);
+        console.log("I am so sad because I'm gone - " + cookie);
+
+        let fav = 3;
+
+        console.log(favoriteCookies[fav]);
+        console.log(favoriteCookies.length);
+        console.log(favoriteCookies[favoriteCookies.lenght-1]);
+
+    </script>  
+</body>
+</html>

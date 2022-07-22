@@ -1,4 +1,6 @@
 {
+  "name": "tau-chai",
+  "description": "testing with chai through TAU",
   "devDependencies": {
     "chai": "^4.3.6"
   }
